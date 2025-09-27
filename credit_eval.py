@@ -1,8 +1,8 @@
+import os
 import google.generativeai as genai
-import json
 
-# Configure Gemini with your API key
-genai.configure(api_key="AIzaSyCQ1QcOjSoGdokndvyUY8K1ZR-D1ATakBQ")
+genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+
 
 
 def build_credit_prompt(entity_record: dict) -> str:
